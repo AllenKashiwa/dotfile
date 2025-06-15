@@ -1,9 +1,6 @@
 # Git 相关别名
 function gs { git status }
-function gc { git commit }
-function gp { git push }
 function gd { git diff }
-function gl { git log --oneline --graph --decorate }
 function gb { git branch }
 function gco { git checkout }
 function gst { git stash }

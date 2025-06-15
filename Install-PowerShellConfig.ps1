@@ -36,15 +36,12 @@ Install-Module -Name posh-git -Scope CurrentUser -Force
 Write-Host "正在配置 PowerShell 配置文件..." -ForegroundColor Cyan  
 $profileContent = @'  
 # Git 相关别名  
-function gs { git status }  
-function gc { git commit }  
-function gp { git push }  
-function gd { git diff }  
-function gl { git log --oneline --graph --decorate }  
-function gb { git branch }  
-function gco { git checkout }  
-function gst { git stash }  
-function gpl { git pull }  
+function gs { git status }
+function gd { git diff }
+function gb { git branch }
+function gco { git checkout }
+function gst { git stash }
+function gpl { git pull }
 
 # 目录导航  
 function .. { Set-Location .. }  
