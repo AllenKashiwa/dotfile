@@ -1,16 +1,3 @@
-以下是整理为 Markdown 格式的跨平台安装脚本，包含完整的配置步骤和说明：  
-
-
-# PowerShell 跨平台配置安装脚本  
-
-
-## 脚本功能概述  
-本脚本用于自动配置 PowerShell 环境，包含 Git 别名、命令补全、Oh-My-Posh 主题等功能，适用于 Windows 系统的跨设备环境迁移。  
-
-
-## 完整脚本代码  
-
-```powershell
 # PowerShell 跨平台配置安装脚本  
 
 # 检查是否以管理员权限运行  
@@ -147,41 +134,3 @@ Write-Host "1. 打开 Windows Terminal" -ForegroundColor Yellow
 Write-Host "2. 在设置中选择 'PowerShell' 配置文件" -ForegroundColor Yellow  
 Write-Host "3. 将字体设置为 'MesloLGS NF'" -ForegroundColor Yellow  
 Write-Host "4. 重启 Windows Terminal" -ForegroundColor Yellow  
-```  
-
-
-## 使用步骤  
-
-1. **保存脚本**：将上述代码复制到文本编辑器，保存为 `Install-PowerShellConfig.ps1`。  
-2. **以管理员身份运行**：右键点击脚本文件 → 选择 **"使用 PowerShell 运行"**。  
-3. **等待安装**：脚本会自动安装 Chocolatey、Git、Windows Terminal 等工具，并配置 PowerShell 环境。  
-4. **手动配置字体**：安装完成后，在 Windows Terminal 设置中选择 `MesloLGS NF` 字体（需先通过 `oh-my-posh font install Meslo` 安装）。  
-5. **重启终端**：关闭并重新打开 Windows Terminal，使配置生效。  
-
-
-## 配置说明  
-
-### 1. **Git 功能增强**  
-- 定义 `gs/gc/gp` 等命令别名，简化 Git 操作。  
-- `gl` 命令显示带图形的精简提交日志。  
-
-### 2. **目录导航优化**  
-- `..`/`...`/`....` 命令快速返回上级目录，`~` 直达用户主目录。  
-
-### 3. **系统工具**  
-- `sysinfo` 命令显示系统版本、处理器等信息。  
-- `killport` 命令强制关闭占用指定端口的进程。  
-
-### 4. **命令提示增强**  
-- 启用 PSReadLine 模块，支持命令预测（`History` 来源）和菜单补全（`Tab` 键）。  
-- 配置上下箭头搜索历史命令，提升操作效率。  
-
-### 5. **终端美化**  
-- 安装 Oh-My-Posh 并配置 `gruvbox` 主题，显示路径、Git 状态等信息。  
-- 设置黑色背景+白色字体，搭配 Nerd Font 显示图标（需手动配置字体）。  
-
-
-## 注意事项  
-- 脚本需管理员权限运行，以确保安装和配置成功。  
-- 若 Oh-My-Posh 主题未生效，可手动检查 `$env:POSH_THEMES_PATH` 路径下的 `gruvbox.omp.json` 是否存在。  
-- 字体配置需在 Windows Terminal 设置中完成，否则可能显示乱码。
